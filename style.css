@@ -1,0 +1,262 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: beige;
+    color: #302a26;
+}
+
+h3, h4 {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+#container {
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #302a26;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#header {
+    width: 100%;
+    background-color: #3c2a1c;
+    color: beige;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#logo {
+    width: 80px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+
+#nav ul li {
+    list-style: none;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: beige;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+#nav li:hover {
+    text-decoration: overline;
+    background-color: #2b1e14;
+}
+
+#main, #main-about {
+    width: 100%;
+    background-color: #a38268;
+    border-top: 3px solid #302a26;
+    border-bottom: 3px solid #302a26;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#main-about {
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#main-about h3 {
+    font-size: 26px;
+    color: beige;
+    border-bottom: 2px solid #302a26;
+    padding-bottom: 10px;
+}
+
+#main-about p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: beige;
+    margin: 0;
+    text-align: justify;
+}
+
+#main .menu {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid #302a26;
+    align-items: center;
+}
+
+#main .menu:last-child {
+    border-bottom: none;
+}
+
+#main .menu .photo {
+    width: 50%;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid #302a26;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#main .menu .aciklama {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.6;
+    color: beige;
+}
+
+#main .menu .aciklama h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: beige;
+    border-bottom: 1px solid rgba(245, 245, 220, 0.3);
+    padding-bottom: 5px;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #3c2a1c;
+}
+
+#footer-contact {
+    width: 50%;
+    padding: 35px;
+    box-sizing: border-box;
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#footer-contact h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#footer-contact .contact-detail {
+    margin: 0;
+    font-size: 16px;
+}
+
+#footer-contact .designer {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+#footer-map {
+    width: 50%;
+    padding: 35px;
+    box-sizing: border-box;
+    background-color: #3c2a1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-map .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+#footer-map .footer-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: beige;
+    transition: opacity 0.2s ease;
+}
+
+#footer-map .footer-links a:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
+    #footer {
+        flex-direction: column;
+    }
+    #footer-contact, #footer-map {
+        width: 100%;
+        text-align: center;
+    }
+    #footer-map {
+        padding-top: 10px;
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #container {
+        width: 95%;
+    }
+    #header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    #main .menu {
+        flex-direction: column;
+    }
+    #main .menu .photo, #main .menu .aciklama {
+        width: 100%;
+    }
+    #main .menu .aciklama {
+        padding: 25px;
+        padding-top: 0;
+    }
+    #main-about {
+        padding: 25px;
+    }
+}
