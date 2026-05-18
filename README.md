@@ -1,2 +1,2 @@
 # Cafe_Website
-My first HTML/CSS project
+A small website for an imaginary cafe which I used HTML and CSS only.
